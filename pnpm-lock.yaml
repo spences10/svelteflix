@@ -43,7 +43,7 @@ devDependencies:
     version: 3.6.6(postcss@8.4.23)(svelte@4.0.0)
   tslib:
     specifier: ^2.5.0
-    version: 2.5.0
+    version: 2.6.2
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -2306,8 +2306,8 @@ packages:
       typescript: 5.0.4
     dev: true
 
-  /tslib@2.5.0:
-    resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+  /tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
   /type-check@0.4.0:
