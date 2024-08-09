@@ -10,7 +10,7 @@ devDependencies:
     version: 1.45.2
   '@sveltejs/adapter-auto':
     specifier: ^3.0.0
-    version: 3.2.2(@sveltejs/kit@2.5.15)
+    version: 3.2.3(@sveltejs/kit@2.5.15)
   '@sveltejs/kit':
     specifier: ^2.0.0
     version: 2.5.15(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@4.2.18)(vite@5.3.4)
@@ -529,8 +529,8 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-auto@3.2.2(@sveltejs/kit@2.5.15):
-    resolution: {integrity: sha512-Mso5xPCA8zgcKrv+QioVlqMZkyUQ5MjDJiEPuG/Z7cV/5tmwV7LmcVWk5tZ+H0NCOV1x12AsoSpt/CwFwuVXMA==}
+  /@sveltejs/adapter-auto@3.2.3(@sveltejs/kit@2.5.15):
+    resolution: {integrity: sha512-VbWzQdNuunHsqa/OqPLqdL3fpyz9tH1f5CawjeYpPcowMI7Ng727M1/Z20yK1L7vrF7L2sYDFeE8vELgUy1Ibg==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
     dependencies:
@@ -574,7 +574,7 @@ packages:
       vite: ^5.0.0
     dependencies:
       '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.3.4)
-      debug: 4.3.5
+      debug: 4.3.6
       svelte: 4.2.18
       vite: 5.3.4
     transitivePeerDependencies:
@@ -589,10 +589,10 @@ packages:
       vite: ^5.0.0
     dependencies:
       '@sveltejs/vite-plugin-svelte-inspector': 2.1.0(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@4.2.18)(vite@5.3.4)
-      debug: 4.3.5
+      debug: 4.3.6
       deepmerge: 4.3.1
       kleur: 4.1.5
-      magic-string: 0.30.10
+      magic-string: 0.30.11
       svelte: 4.2.18
       svelte-hmr: 0.16.0(svelte@4.2.18)
       vite: 5.3.4
@@ -998,6 +998,18 @@ packages:
 
   /debug@4.3.5:
     resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
+  /debug@4.3.6:
+    resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -1574,6 +1586,12 @@ packages:
 
   /magic-string@0.30.10:
     resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+    dev: true
+
+  /magic-string@0.30.11:
+    resolution: {integrity: sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
