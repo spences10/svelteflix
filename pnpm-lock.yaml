@@ -40,7 +40,7 @@ devDependencies:
     version: 4.2.18
   svelte-check:
     specifier: ^3.2.0
-    version: 3.8.4(postcss@8.4.39)(svelte@4.2.18)
+    version: 3.8.5(postcss@8.4.39)(svelte@4.2.18)
   tslib:
     specifier: ^2.5.0
     version: 2.6.3
@@ -365,7 +365,7 @@ packages:
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -2054,8 +2054,8 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-check@3.8.4(postcss@8.4.39)(svelte@4.2.18):
-    resolution: {integrity: sha512-61aHMkdinWyH8BkkTX9jPLYxYzaAAz/FK/VQqdr2FiCQQ/q04WCwDlpGbHff1GdrMYTmW8chlTFvRWL9k0A8vg==}
+  /svelte-check@3.8.5(postcss@8.4.39)(svelte@4.2.18):
+    resolution: {integrity: sha512-3OGGgr9+bJ/+1nbPgsvulkLC48xBsqsgtc8Wam281H4G9F5v3mYGa2bHRsPuwHC5brKl4AxJH95QF73kmfihGQ==}
     hasBin: true
     peerDependencies:
       svelte: ^3.55.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
@@ -2145,7 +2145,7 @@ packages:
     dependencies:
       '@types/pug': 2.0.10
       detect-indent: 6.1.0
-      magic-string: 0.30.10
+      magic-string: 0.30.11
       postcss: 8.4.39
       sorcery: 0.11.1
       strip-indent: 3.0.0
