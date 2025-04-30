@@ -1,8 +1,13 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import logo from '$lib/images/logo.svg';
 	import tmdb from '$lib/images/tmdb.svg';
 	import '../styles.css';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <nav>
@@ -17,8 +22,8 @@
 	</div>
 </nav>
 
-<main class:infinite={$page.data.infinite}>
-	<slot />
+<main class:infinite={page.data.infinite}>
+	{@render children?.()}
 </main>
 
 <footer>

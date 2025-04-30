@@ -2,15 +2,21 @@
 	import { media } from '$lib/api';
 	import type { MovieDetails } from '$lib/types';
 
-	export let movie: MovieDetails;
+	interface Props {
+		movie: MovieDetails;
+	}
 
-	$: images = movie.images;
-	$: backdrop =
+	let { movie }: Props = $props();
+
+	let images = $derived(movie.images);
+	let backdrop = $derived(
 		images.backdrops.find((image) => !image.iso_639_1) ||
-		images.backdrops[0];
-	$: logo =
+			images.backdrops[0]
+	);
+	let logo = $derived(
 		images.logos.find((image) => image.iso_639_1 === 'en') ||
-		images.logos[0];
+			images.logos[0]
+	);
 </script>
 
 <a class="column" href="/movies/{movie.id}">

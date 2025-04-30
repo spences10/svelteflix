@@ -2,11 +2,16 @@
 	import { media } from '$lib/api';
 	import type { MovieDetails } from '$lib/types';
 
-	export let movie: MovieDetails;
+	interface Props {
+		movie: MovieDetails;
+	}
 
-	$: backdrop =
+	let { movie }: Props = $props();
+
+	let backdrop = $derived(
 		movie.images.backdrops.find((image) => !image.iso_639_1) ||
-		movie.images.backdrops[0];
+			movie.images.backdrops[0]
+	);
 </script>
 
 <div class="hero">

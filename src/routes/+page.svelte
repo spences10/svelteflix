@@ -3,7 +3,7 @@
 	import { views } from '$lib/views';
 	import Hero from './hero.svelte';
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <h1 class="column">Top trending movies</h1>

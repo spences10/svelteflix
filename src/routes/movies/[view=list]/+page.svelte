@@ -2,7 +2,7 @@
 	import * as api from '$lib/api';
 	import ResultsPage from '$lib/components/results-page.svelte';
 
-	export let data;
+	let { data = $bindable() } = $props();
 
 	let appending = false;
 </script>

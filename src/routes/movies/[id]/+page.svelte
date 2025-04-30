@@ -2,7 +2,7 @@
 	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from './hero.svelte';
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <Hero movie={data.movie} />
@@ -15,7 +15,7 @@
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 			allowfullscreen
-		/>
+		></iframe>
 	{/if}
 
 	<dl>

@@ -3,21 +3,25 @@
 	import type { MovieListResult } from '$lib/types';
 	import { createEventDispatcher, onMount } from 'svelte';
 
-	export let movies: MovieListResult[];
-	export let next: string | null;
+	interface Props {
+		movies: MovieListResult[];
+		next: string | null;
+	}
+
+	let { movies, next }: Props = $props();
 
 	const dispatch = createEventDispatcher();
 
-	let viewport: HTMLElement;
-	let results: HTMLElement;
+	let viewport: HTMLElement = $state();
+	let results: HTMLElement = $state();
 	let item_width: number;
 	let item_height: number;
 	let num_columns = 4;
 
-	let a = 0;
-	let b = movies.length;
-	let padding_top = 0;
-	let padding_bottom = 0;
+	let a = $state(0);
+	let b = $state(movies.length);
+	let padding_top = $state(0);
+	let padding_bottom = $state(0);
 
 	const handle_resize = () => {
 		const first = results.firstChild as HTMLAnchorElement;
@@ -51,9 +55,9 @@
 	onMount(handle_resize);
 </script>
 
-<svelte:window on:resize={handle_resize} />
+<svelte:window onresize={handle_resize} />
 
-<div bind:this={viewport} on:scroll={handle_scroll} class="viewport">
+<div bind:this={viewport} onscroll={handle_scroll} class="viewport">
 	<div
 		bind:this={results}
 		class="results"

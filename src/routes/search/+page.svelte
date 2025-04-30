@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ResultsPage from '$lib/components/results-page.svelte';
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <div class="column">

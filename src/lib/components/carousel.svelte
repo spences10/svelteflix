@@ -3,9 +3,13 @@
 	import type { MovieListResult } from '$lib/types';
 	import type { View } from '$lib/views';
 
-	export let movies: MovieListResult[];
-	export let view: View;
-	export let href: string | null = null;
+	interface Props {
+		movies: MovieListResult[];
+		view: View;
+		href?: string | null;
+	}
+
+	let { movies, view, href = null }: Props = $props();
 </script>
 
 <h2 class="column">
